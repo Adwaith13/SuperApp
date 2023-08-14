@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+*{
+    margin: 0; 
+}
+
+img{
+    height: 100%;
+    width:50%;
+    position: absolute;
+}
+
+#image-text{
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    margin-top: 72vh;
+    margin-left: 2vw;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    letter-spacing: 1.1px;
+}
+
+#image-text1{
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    margin-top: 78vh;
+    margin-left: 2vw;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    letter-spacing: 1.1px;
+}
+
+.right{
+    background-color: black;
+    height: 100vh;
+}
+form{
+    margin-left: 60vw;
+}
+#head{
+    font-family: 'Single Day',cursive;
+    color: #72DB73;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-left: 90px;
+    margin-bottom: 10px;
+}
+
+#para{
+    font-family: 'DM Sans',sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 25px;
+    margin-left: 55px;
+}
+
+#input{
+    height: 45px;
+    width: 300px;
+    color: #7C7C7C;
+    font-family: 'DM Sans',sans-serif;
+    font-size: 15px;
+    background-color: #292929;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 90px;
+}
+
+#error{
+    color: #F00;
+    font-family: 'DM Sans',sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    
+}
+
+#check-text{
+    color: #7C7C7C;
+    font-family: 'DM Sans',sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+button{
+    height: 40px;
+    width: 410px;
+    color: white;
+    font-family: 'Roboto',sans-serif;
+    font-size: 20px;
+    background-color: #72DB73;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+#terms{
+    color: #7C7C7C;
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+}
+
+#green{
+    color: #72DB73;
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+#terms2{
+    color: #7C7C7C;
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+}
+
+#green2{
+    color: #72DB73;
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+}
