@@ -2,6 +2,7 @@
 
 *{
     margin: 0; 
+    background-color: black;
 }
 
 img{
@@ -35,26 +36,28 @@ img{
 }
 
 .right{
-    background-color: black;
-    height: 100vh;
+    margin-left: 50%;
+    padding-bottom: 62px;
+    height: 100%;
 }
+
 form{
-    margin-left: 60vw;
+    margin-left: 10vw;
 }
 #head{
     font-family: 'Single Day',cursive;
     color: #72DB73;
     font-size: 50px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 90px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 #para{
     font-family: 'DM Sans',sans-serif;
     font-size: 20px;
     color: white;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     margin-left: 55px;
 }
 
@@ -96,7 +99,7 @@ button{
     font-family: 'Roboto',sans-serif;
     font-size: 20px;
     background-color: #72DB73;
-    border-radius: 10px;
+    border-radius: 25px;
     cursor: pointer;
     margin-top: 5px;
 }
