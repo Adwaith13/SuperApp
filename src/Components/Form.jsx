@@ -38,6 +38,7 @@ export default function Form() {
 
     } else {
       setError(false);
+      localStorage.setItem('Values', values)
     }
   
   };
@@ -72,12 +73,12 @@ export default function Form() {
         <button onClick={submitHandle}>SIGN UP</button>
         <br></br>
         <br></br>
-      <span id="terms">By clicking on Sign up. you agree to Superapp</span>    <span id="green">Terms and</span><br></br>
-      <span id="green">Conditions of Use</span>
-      <br></br>
-      <span id="terms2">To learn more about how Superapp collects, uses, shares and </span> <br></br>
-      <span id="terms2">protects your personal data please head Superapp</span>   <span id='green2'>Privacy</span> <br></br>
-      <span id="green2">Policy</span>
+        <span id="terms">By clicking on Sign up. you agree to Superapp</span>    <span id="green">Terms and</span><br></br>
+        <span id="green">Conditions of Use</span>
+        <br></br>
+        <span id="terms2">To learn more about how Superapp collects, uses, shares and </span> <br></br>
+        <span id="terms2">protects your personal data please head Superapp</span>   <span id='green2'>Privacy</span> <br></br>
+        <span id="green2">Policy</span>
       </form>
       </div>
     </>
