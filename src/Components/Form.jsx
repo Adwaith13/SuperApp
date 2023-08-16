@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailValidator from "email-validator";
+import { useNavigate } from "react-router-dom";
 import  './Form.css'
 
 export default function Form() {
@@ -23,6 +24,7 @@ export default function Form() {
   const[checked,setChecked]=useState(false)
  
   const validemail = emailValidator.validate(email)
+  const navigate=useNavigate();
 
   const checkboxHandle=()=>{
     setChecked(!checked)
@@ -39,6 +41,7 @@ export default function Form() {
     } else {
       setError(false);
       localStorage.setItem('Values', values)
+      navigate('category')
     }
   
   };
