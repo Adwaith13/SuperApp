@@ -40,10 +40,10 @@ export default function Form() {
 
     } else {
       setError(false);
-      localStorage.setItem('Values', values)
+      localStorage.setItem('values',JSON.stringify(values))
+      localStorage.setItem('email',JSON.stringify(email))
       navigate('category')
     }
-  
   };
 
   return (
@@ -67,7 +67,7 @@ export default function Form() {
         <br/>
         {isValid && email.length >= 6 ? "" : <label id="error">Field is required</label>}
         <br></br>
-        <input type="text" id='input' name="number" placeholder="Number" value={values.number} onChange={changeHandle}></input>
+        <input type="text" id='input' name="number" minLength={10} maxLength={10} placeholder="Number" value={values.number} onChange={changeHandle}></input>
         <br />
         {error && values.number.length < 10   ? <label id="error">Field is required</label> :""}
         <br></br>
