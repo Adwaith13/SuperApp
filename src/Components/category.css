@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+*{
+    margin: 0;
+}
+#super-app{
+    display: inline;
+    color: #72DB73;
+    position: absolute;
+    font-family: 'Single Day',cursive;
+    font-size: 50px;
+    font-weight: 200;
+    margin-left: 100px;
+    margin-top: 28px;
+}
+
+.text{
+    color: white;
+    position: absolute;
+    font-family: 'Roboto',sans-serif;
+    margin-left: 100px;
+    margin-top: 25vh;
+}
+
+#page-text1,#page-text2,#page-text3{
+    font-size: 55px;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 45px;
+    margin-left: 53vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card{
+    padding: 10px 10px;
+    height: 5%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+#title{
+    font-family: 'DM Sans',sans-serif;
+    color: white;
+    font-size: 25px;
+    font-weight: 200;
+    padding: 10px 10px;
+    display: flex;
+}
+
+#img{
+    margin-top: 5px;
+    width: 180px; 
+    height: auto;
+    margin-bottom: 2px;
+}
+
+.card.selected{
+    border:5px solid #11B800;
+}
+
+.selected-genres{
+    width: calc(30% - 50px);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30%;
+    margin-left: 100px;
+    justify-content: space-between;
+    position: absolute;
+}
+
+#genres-display{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin:5px 5px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #148A08;
+    border-radius: 20px;
+}
+#remove-icon{
+    cursor: pointer;
+    height: 13px;
+    margin-left: 10px;
+}
+
