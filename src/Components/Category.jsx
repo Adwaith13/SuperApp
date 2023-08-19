@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./category.css";
 
 export default function Category() {
@@ -61,8 +62,9 @@ export default function Category() {
         return [...prevSelectedGenres, genre];
       }
     });
+    setError(false)
   };
-console.log(selectedGenres.length)
+
   const selected = (genre) => {
     return selectedGenres.includes(genre);
   };
@@ -73,17 +75,20 @@ console.log(selectedGenres.length)
     );
   };
 
+  const navigate=useNavigate()  
+
   const nextPage=()=>{
-    if(setSelectedGenres.length < 3){
+    if(selectedGenres.length < 3){
       setError(true)
     }
     else{
       setError(false)
+      navigate('/homepage')
     }
   }
   localStorage.setItem('selected genres',JSON.stringify(selectedGenres))
   return (
-    <>
+    <div className="category-app">
       <h1 id="super-app">Super App</h1>
       <div className="text">
         <span id="page-text1">Choose your</span>
@@ -96,9 +101,10 @@ console.log(selectedGenres.length)
         <div className="selected-genres">
             {selectedGenres.map((genre, i) => (
               <li key={i} id="genres-display">{genre.title} <img src="/remove.svg" id="remove-icon" alt="delete-icon" onClick={()=>deleteGenre(genre)}></img></li>
-            ))}
+              ))}
         </div>
       )}
+      <span id="genre-error">{error ?<img src="error.svg" alt="err" id="error-icon"/>:''}{error?'Minimum 3 category required':''}</span>
 
       <div className="container">
         {genres.map((genre, i) => (
@@ -113,8 +119,7 @@ console.log(selectedGenres.length)
           </div>
         ))}
       </div>
-     <span id="error"> <img src="/error.svg" alt="err"></img>{error ? "Minimum 3 category required":'no'}</span>
-      <button onClick={nextPage}>Next Page</button>
-    </>
+      <button onClick={nextPage} id="button">Next Page</button>
+    </div>
   );
 }
