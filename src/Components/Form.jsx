@@ -41,7 +41,7 @@ export default function Form() {
     } else {
       setError(false);
       localStorage.setItem('values',JSON.stringify(values))
-      localStorage.setItem('email',JSON.stringify(email))
+      localStorage.setItem('email',(email))
       navigate('category')
     }
   };
