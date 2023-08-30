@@ -11,18 +11,31 @@ export default function Browse() {
   const titles = jsonparse.map((genre) => genre.title);
 
   useEffect(() => {    
-    const options = {
-      method: "GET",
-      url: "https://ott-details.p.rapidapi.com/advancedsearch",
-      params: {
-        genre: `${titles}`,
-        type: "movie",
-      },
-      headers: {
-        "X-RapidAPI-Key": "f6fc683e1bmshe738e6d6a53df25p159b6ejsn1cc2621a2f86",
-        "X-RapidAPI-Host": "ott-details.p.rapidapi.com",
-      },
-    };
+const options = {
+  method: 'GET',
+  url: 'https://api.themoviedb.org/3/discover/movie',
+  params: {
+    include_adult: 'false',
+    include_video: 'false',
+    language: 'en-US',
+    page: '1',
+    sort_by: 'popularity.desc',
+    genre:`${titles}`
+  },
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNDA3NzkxNzk2NzU3YmMzMzVkMzA5NDRlODk2ZGNkMiIsInN1YiI6IjY0ZTQ3NjJhYzNjODkxMDBjNjgwY2Q1MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GOVuj74nun9U9vVbFKErnNBz_xqCLe8QuZU3BsjZYC0'
+  }
+};
+
+axios
+  .request(options)
+  .then(function (response) {
+    console.log(response.data);
+  })
+  .catch(function (error) {
+    console.error(error);
+  });
     axios
       .request(options)
       .then((res) => {
@@ -32,7 +45,7 @@ export default function Browse() {
       .catch((err) => {
         console.log(err);
       });
-  });
+  },[]);
 
   const movies=random.sampleSize(movie,4)
 
@@ -48,7 +61,7 @@ export default function Browse() {
     {movies.map((movie, index) => (
         <div id="poster" key={index}>
           <img id="movie-poster"
-            src={movie.imageurl}
+            src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt={movie.title}
             className="movie-poster"
           />

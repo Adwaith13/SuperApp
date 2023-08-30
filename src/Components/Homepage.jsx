@@ -99,7 +99,7 @@ export default function Homepage() {
         <p id="user-username">{username}</p>
         <div className="genres">
         {genreTitle.map((title,index) => (
-        <p key={index} id='user-genre'>{title}</p>
+        <span key={index} id='user-genre'>{title}</span>
       ))}
         </div>
       </div>
