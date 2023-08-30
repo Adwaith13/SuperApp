@@ -5,14 +5,12 @@ import "./browse.css"
 
 export default function Browse() {
   const [movie, setMovie] = useState(null);
-  const [genreTitles,setGenreTitles]=useState()
-  
+
   const localStorageGenredata = localStorage.getItem("selected genres");
   const jsonparse = JSON.parse(localStorageGenredata);
   const titles = jsonparse.map((genre) => genre.title);
-  setGenreTitles(titles)
-  useEffect(() => {
-    
+
+  useEffect(() => {    
     const options = {
       method: "GET",
       url: "https://ott-details.p.rapidapi.com/advancedsearch",
@@ -34,7 +32,7 @@ export default function Browse() {
       .catch((err) => {
         console.log(err);
       });
-  },[]);
+  });
 
   const movies=random.sampleSize(movie,4)
 
@@ -43,7 +41,7 @@ export default function Browse() {
     <h1 id="browse-head">Super App</h1>
     <p id="browse-para">Entertainment according to your choice</p>
     <span id="genre-title">
-      {genreTitles.map((title,index) => (
+      {titles.map((title,index) => (
         <p key={index}>{title}</p>
       ))}</span>
     <div className="movies">
