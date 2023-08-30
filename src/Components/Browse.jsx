@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import random from "lodash";
+import { useNavigate } from "react-router-dom";
 import "./browse.css"
 
 export default function Browse() {
@@ -9,9 +10,10 @@ export default function Browse() {
   const localStorageGenredata = localStorage.getItem("selected genres");
   const jsonparse = JSON.parse(localStorageGenredata);
   const titles = jsonparse.map((genre) => genre.title);
+  const apikey=process.env.REACT_APP_API_KEY;
 
   useEffect(() => {    
-const options = {
+  const options = {
   method: 'GET',
   url: 'https://api.themoviedb.org/3/discover/movie',
   params: {
@@ -28,14 +30,6 @@ const options = {
   }
 };
 
-axios
-  .request(options)
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.error(error);
-  });
     axios
       .request(options)
       .then((res) => {
@@ -49,14 +43,20 @@ axios
 
   const movies=random.sampleSize(movie,4)
 
+  const navigate=useNavigate();
+  const homepageNavigate=()=>{
+    navigate('/category')
+  }
+
   return(
     <>
     <h1 id="browse-head">Super App</h1>
     <p id="browse-para">Entertainment according to your choice</p>
-    <span id="genre-title">
+    <div className="titles">
       {titles.map((title,index) => (
-        <p key={index}>{title}</p>
-      ))}</span>
+        <span key={index} id="genre-title">{title}</span>
+      ))}
+    </div>
     <div className="movies">
     {movies.map((movie, index) => (
         <div id="poster" key={index}>
@@ -68,6 +68,7 @@ axios
         </div>
       ))}
     </div>
+    <button id="homepage-btn" onClick={homepageNavigate}>HomePage</button>
 
     </>
   )
