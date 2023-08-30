@@ -98,7 +98,9 @@ export default function Homepage() {
         <p id="user-email">{localStorage.getItem("email")}</p>
         <p id="user-username">{username}</p>
         <div className="genres">
-          <p id="user-genre">{genreTitle}</p>
+        {genreTitle.map((title,index) => (
+        <p key={index} id='user-genre'>{title}</p>
+      ))}
         </div>
       </div>
 

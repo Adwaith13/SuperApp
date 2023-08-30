@@ -56,9 +56,7 @@ body{
 }
 
 .genres {
-  display: flex;
-  position: absolute;
-  flex-wrap: wrap;
+  display: inline;
   margin-top: 185px;
   margin-left: 180px;
   gap: 20px;
@@ -71,10 +69,12 @@ body{
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.32px;
-  width: fit-content;
-  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content  ;
   background-color: #9f94ff;
   padding: 10px 20px;
+  border-radius: 10px;
 }
 
 .weather {
