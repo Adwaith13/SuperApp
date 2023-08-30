@@ -93,7 +93,7 @@ export default function Homepage() {
       </div>
 
       <div className="user-card">
-        <img src="/profile.png" alt="user-profile" id="profile-icon"></img>
+        <img src="./SuperApp/profile.png" alt="user-profile" id="profile-icon"></img>
         <p id="user-name">{name}</p>
         <p id="user-email">{localStorage.getItem("email")}</p>
         <p id="user-username">{username}</p>

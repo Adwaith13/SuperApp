@@ -48,7 +48,7 @@ export default function Form() {
 
   return (
     <>
-     <img src="/image1.png" alt="Image1" className="left-img"></img>
+     <img src="./SuperApp/image1.png" alt="Image1" className="left-img"></img>
      <span id="image-text">Discover new things on</span><br></br>
      <span id="image-text1">Superapp</span>
      <div className="right">

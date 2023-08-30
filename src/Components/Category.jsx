@@ -6,47 +6,47 @@ export default function Category() {
   const [genres] = useState([
     {
       title: "Action",
-      image: "/action.png",
+      image: "./SuperApp/action.png",
       color: "#FF5209",
     },
     {
       title: "Drama",
-      image: "/drama.png",
+      image: "./SuperApp/drama.png",
       color: "#D7A4FF",
     },
     {
       title: "Romance",
-      image: "/romance.png",
+      image: "./SuperApp/romance.png",
       color: "#148A08",
     },
     {
       title: "Thriller",
-      image: "/thriller.png",
+      image: "./SuperApp/thriller.png",
       color: "#84C2FF",
     },
     {
       title: "Western",
-      image: "/western.png",
+      image: "./SuperApp/western.png",
       color: "#902500",
     },
     {
       title: "Horror",
-      image: "/horror.png",
+      image: "./SuperApp/horror.png",
       color: "#7358FF",
     },
     {
       title: "Fantasy",
-      image: "/fantasy.png",
+      image: "./SuperApp/fantasy.png",
       color: "#FF4ADE",
     },
     {
       title: "Music",
-      image: "/music.png",
+      image: "./SuperApp/music.png",
       color: "#E61E32",
     },
     {
       title: "Fiction",
-      image: "/fiction.png",
+      image: "./SuperApp/fiction.png",
       color: "#6CD061",
     },
   ]);
@@ -100,7 +100,7 @@ export default function Category() {
       {selectedGenres.length > 0 && (
         <div className="selected-genres">
             {selectedGenres.map((genre, i) => (
-              <li key={i} id="genres-display">{genre.title} <img src="/remove.svg" id="remove-icon" alt="delete-icon" onClick={()=>deleteGenre(genre)}></img></li>
+              <li key={i} id="genres-display">{genre.title} <img src="./SuperApp/remove.svg" id="remove-icon" alt="delete-icon" onClick={()=>deleteGenre(genre)}></img></li>
               ))}
         </div>
       )}

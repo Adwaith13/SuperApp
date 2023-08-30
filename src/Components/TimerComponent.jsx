@@ -74,18 +74,18 @@ export default function TimerComponent() {
       <div className='increment-decrement'>
         <span id='hours'>HOURS</span> <span id='min'>MINUTES</span>  <span id='seconds'>SECONDS</span>
         <br></br>
-        <img src='/up-arrow.svg' alt='increment-hr' id='hr-up' onClick={() => incrementTime('hours')}></img>
+        <img src='./SuperApp/up-arrow.svg' alt='increment-hr' id='hr-up' onClick={() => incrementTime('hours')}></img>
         <br></br>
         <span id='time-hr'>{hours.toString().padStart(2, '0')}</span>
-        <img src='/down.svg' alt='decrement-hr' id='hr-down' onClick={() => decrementTime('hours')}></img>
+        <img src='./SuperApp/down.svg' alt='decrement-hr' id='hr-down' onClick={() => decrementTime('hours')}></img>
         
-        <img src='/up-arrow.svg' alt='increment-min' id='min-up' onClick={() => incrementTime('minutes')}></img>
+        <img src='./SuperApp/up-arrow.svg' alt='increment-min' id='min-up' onClick={() => incrementTime('minutes')}></img>
         <span id='time-min'> {minutes.toString().padStart(2, '0')}</span>
-        <img src='/down.svg' alt='decrement-min' id='min-down' onClick={() => decrementTime('minutes')}></img>
+        <img src='./SuperApp/down.svg' alt='decrement-min' id='min-down' onClick={() => decrementTime('minutes')}></img>
         
-        <img src='/up-arrow.svg' alt='increment-sec' id='sec-up' onClick={() => incrementTime('seconds')}></img>
+        <img src='./SuperApp/up-arrow.svg' alt='increment-sec' id='sec-up' onClick={() => incrementTime('seconds')}></img>
           <span id='time-sec'>{seconds.toString().padStart(2, '0')}</span>
-        <img src='/down.svg' alt='decrement-sec' id='sec-down' onClick={() => decrementTime('seconds')}></img>
+        <img src='./SuperApp/down.svg' alt='decrement-sec' id='sec-down' onClick={() => decrementTime('seconds')}></img>
 
       </div>
 
