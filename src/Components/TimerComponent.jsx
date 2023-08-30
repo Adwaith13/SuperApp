@@ -94,8 +94,8 @@ export default function TimerComponent() {
           <button id='timer-btn' onClick={startTimer}>Start</button>
         ) : (
           <>
-            <button id='timer-btn' onClick={pauseTimer}>Pause</button>
-            <button id='timer-btn' onClick={resumeTimer}>Resume</button>
+            <button id='pause-btn' onClick={pauseTimer}>Pause</button>
+            <button id='resume-btn' onClick={resumeTimer}>Resume</button>
           </>
         )}
       </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./homepage.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import TimerComponent from "./TimerComponent";
 
 export default function Homepage() {
@@ -59,6 +60,19 @@ export default function Homepage() {
   const date = `${month}-${day}-${year}`;
   const time = `${hours}:${minutes} ${ampm}`;
 
+  const[text,setText]=useState('')
+  const textChangeHandle=(e)=>{
+    const textchange=e.target.value;
+    localStorage.setItem('textarea',textchange)
+    setText(textchange)
+  }
+  console.log(text)
+
+  const navigate=useNavigate();
+  const btnHandle=()=>{
+    navigate('/browse')
+  }
+
   return (
     <>
       <div className="news">
@@ -71,7 +85,11 @@ export default function Homepage() {
           <div className="news-display">
             <p>{news.description}</p>
           </div>
-            
+      </div>
+
+      <div className="text-area">
+        <h1 id="notes-head">All Notes</h1>
+        <textarea id="textarea" rows="33" cols="50" onChange={textChangeHandle} style={{ overflowY: 'auto' }}></textarea>
       </div>
 
       <div className="user-card">
@@ -125,8 +143,8 @@ export default function Homepage() {
           </div>
         </div>
       )}
-
       <TimerComponent></TimerComponent>
+      <button id="browse-btn" onClick={btnHandle}>Browse</button>
     </>
   );
 }

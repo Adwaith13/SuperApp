@@ -251,3 +251,29 @@ body{
   background-color: white;
   border-radius: 5px;
 }
+
+#notes-head{
+  position: absolute;
+  display: inline;
+  text-align: center;
+  margin-left: 30px;
+  margin-top: 20px;
+  font-family: 'Roboto',sans-serif;
+}
+
+.text-area{
+  position: absolute;
+  margin-left: 40%;
+  border-radius: 20px;
+}
+
+#textarea{
+  border-radius: 15px;
+  background-color: #F1C75B;
+}
+
+#browse-btn{
+  background-color: #148A08;
+  width: 120px;
+  margin-left: 88vw;
+}
