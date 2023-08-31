@@ -6,12 +6,10 @@ import "./browse.css"
 
 export default function Browse() {
   const [movie, setMovie] = useState(null);
-
   const localStorageGenredata = localStorage.getItem("selected genres");
   const jsonparse = JSON.parse(localStorageGenredata);
   const titles = jsonparse.map((genre) => genre.title);
-  const apikey=process.env.REACT_APP_API_KEY;
-
+  
   useEffect(() => {    
   const options = {
   method: 'GET',
@@ -26,14 +24,13 @@ export default function Browse() {
   },
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNDA3NzkxNzk2NzU3YmMzMzVkMzA5NDRlODk2ZGNkMiIsInN1YiI6IjY0ZTQ3NjJhYzNjODkxMDBjNjgwY2Q1MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GOVuj74nun9U9vVbFKErnNBz_xqCLe8QuZU3BsjZYC0'
+    Authorization:process.env.REACT_APP_API_KEY,
   }
 };
 
     axios
       .request(options)
       .then((res) => {
-        console.log(res.data.results);
         setMovie(res.data.results)
       })
       .catch((err) => {
