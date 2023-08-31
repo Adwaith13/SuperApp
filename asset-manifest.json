@@ -1,15 +1,33 @@
 {
   "files": {
     "main.css": "/SuperApp/static/css/main.9841b77a.css",
-    "main.js": "/SuperApp/static/js/main.803c0bde.js",
+    "main.js": "/SuperApp/static/js/main.e789301b.js",
     "static/js/787.6806dc6f.chunk.js": "/SuperApp/static/js/787.6806dc6f.chunk.js",
+    "static/media/image1.png": "/SuperApp/static/media/image1.c72c5eacf24657d48668.png",
+    "static/media/drama.png": "/SuperApp/static/media/drama.a864eaad38bb02659d53.png",
+    "static/media/romance.png": "/SuperApp/static/media/romance.85a525e5ca18760f0560.png",
+    "static/media/profile.png": "/SuperApp/static/media/profile.c5b5f418e8556481bd39.png",
+    "static/media/horror.png": "/SuperApp/static/media/horror.8cf0ef237d63dfef56fd.png",
+    "static/media/fantasy.png": "/SuperApp/static/media/fantasy.295291168336c5eebc9a.png",
+    "static/media/thriller.png": "/SuperApp/static/media/thriller.53b6360f463eb2515768.png",
+    "static/media/fiction.png": "/SuperApp/static/media/fiction.164110864e07a7bc5039.png",
+    "static/media/western.png": "/SuperApp/static/media/western.33884603ce10ce9ab4bd.png",
+    "static/media/music.png": "/SuperApp/static/media/music.b85d63c50705d38d047d.png",
+    "static/media/action.png": "/SuperApp/static/media/action.dd2247aacae63344f4a7.png",
+    "static/media/windspeed.svg": "/SuperApp/static/media/windspeed.970b88afdd77979629fe136745857e87.svg",
+    "static/media/pressure.svg": "/SuperApp/static/media/pressure.5171d19b0fa6a86d1c77f6738ee5585c.svg",
+    "static/media/error.svg": "/SuperApp/static/media/error.68266ed0f6106449be03aa79e12118ca.svg",
+    "static/media/humidity.svg": "/SuperApp/static/media/humidity.f8d1720d89dca6d40dd1373e71ec3cfd.svg",
     "index.html": "/SuperApp/index.html",
+    "static/media/up-arrow.svg": "/SuperApp/static/media/up-arrow.cf33e7bfc72acaab07afc1a47809c843.svg",
+    "static/media/down.svg": "/SuperApp/static/media/down.66c667556243b2edc6afd71aa22fd648.svg",
+    "static/media/remove.svg": "/SuperApp/static/media/remove.e468d39f092f2dbb71a690bfde3b7d26.svg",
     "main.9841b77a.css.map": "/SuperApp/static/css/main.9841b77a.css.map",
-    "main.803c0bde.js.map": "/SuperApp/static/js/main.803c0bde.js.map",
+    "main.e789301b.js.map": "/SuperApp/static/js/main.e789301b.js.map",
     "787.6806dc6f.chunk.js.map": "/SuperApp/static/js/787.6806dc6f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9841b77a.css",
-    "static/js/main.803c0bde.js"
+    "static/js/main.e789301b.js"
   ]
 }
